@@ -149,4 +149,5 @@ new #[Layout('components.layouts.public.app')] class extends Component {
 
     {{-- @include('partials.public.community-numbers') --}}
     @include('partials.public.cta')
+        
 </div>
