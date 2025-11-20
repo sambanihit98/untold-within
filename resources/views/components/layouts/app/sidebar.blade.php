@@ -65,22 +65,22 @@
 
                     <!-- User Management -->
                     <flux:navlist.group :heading="__('User Management')" class="grid">
-                        <flux:navlist.item icon="users" wire:navigate>
+                        <flux:navlist.item icon="users" :href="route('admin.users-management')" :current="request()->routeIs('admin.users-management', 'admin.users-management.*')" wire:navigate>
                             {{ __('Users Management') }}
                         </flux:navlist.item>
 
-                        <flux:navlist.item icon="chat-bubble-bottom-center-text" wire:navigate>
-                            {{ __('Feedback') }}
+                        <flux:navlist.item icon="chat-bubble-bottom-center-text" :href="route('admin.feedbacks')" :current="request()->routeIs('admin.feedbacks', 'admin.feedbacks.*')" wire:navigate>
+                            {{ __('Feedbacks') }}
                         </flux:navlist.item>
 
-                        <flux:navlist.item icon="envelope" wire:navigate>
+                        <flux:navlist.item icon="envelope" :href="route('admin.newsletter')" :current="request()->routeIs('admin.newsletter', 'admin.newsletter.*')" wire:navigate>
                             {{ __('Newsletter') }}
                         </flux:navlist.item>
                     </flux:navlist.group>
 
                     <!-- System & Settings -->
                     <flux:navlist.group :heading="__('System Settings')" class="grid">
-                        <flux:navlist.item icon="list-bullet" wire:navigate>
+                        <flux:navlist.item icon="list-bullet" :href="route('admin.activity-logs')" :current="request()->routeIs('admin.activity-logs', 'admin.activity-logs.*')" wire:navigate>
                             {{ __('Activity Logs') }}
                         </flux:navlist.item>
 

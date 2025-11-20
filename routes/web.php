@@ -31,6 +31,14 @@ Route::middleware(['auth:admin', 'verified'])->group(function () {
 
     Volt::route('admin/news-and-alerts', 'private.admin.news-and-alerts.index')->name('admin.news-and-alerts');
 
+    Volt::route('admin/activity-logs', 'private.admin.activity-logs')->name('admin.activity-logs');
+
+    Volt::route('admin/feedbacks', 'private.admin.feedbacks.index')->name('admin.feedbacks');
+
+    Volt::route('admin/newsletter', 'private.admin.newsletter.index')->name('admin.newsletter');
+
+    Volt::route('admin/users-management', 'private.admin.users-management.index')->name('admin.users-management');
+
     //SETTINGS
     Route::redirect('admin/settings', 'private.admin.settings/profile');
     Volt::route('admin/settings/profile', 'private.admin.settings.profile')->name('admin.settings.profile');
