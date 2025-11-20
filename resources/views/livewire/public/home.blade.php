@@ -30,8 +30,8 @@ new #[Layout('components.layouts.public.app')] class extends Component {
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
   "
   x-bind:style="dark
-    ? 'background-image: url(/img/hero-bg-dark.png); background-position: 50% 50%; background-size: cover; background-repeat: no-repeat;'
-    : 'background-image: url(/img/hero-bg-4.jpg); background-position: 50% 50%; background-size: cover; background-repeat: no-repeat;'"
+    ? 'background-image: url(/storage/img/hero-bg-dark.png); background-position: 50% 50%; background-size: cover; background-repeat: no-repeat;'
+    : 'background-image: url(/storage/img/hero-bg-4.jpg); background-position: 50% 50%; background-size: cover; background-repeat: no-repeat;'"
   class="relative min-h-[100vh] flex flex-col items-center text-center px-6 transition-all duration-500"
 >
 
