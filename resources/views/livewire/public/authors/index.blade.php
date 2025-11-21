@@ -26,7 +26,7 @@ new #[Layout('components.layouts.public.app')] class extends Component {
                     'followings',
                     'followers'
                 ])
-                ->orderByDesc('post_count')
+                ->orderByDesc('public_post_count')
                 ->paginate(10);
     }
 
