@@ -49,10 +49,10 @@
 
             <flux:dropdown x-data align="end">
                 <flux:button variant="subtle" square class="group" aria-label="Preferred color scheme">
-                    <flux:icon.sun x-show="$flux.appearance === 'light'" variant="mini" class="text-zinc-500 dark:text-white" />
-                    <flux:icon.moon x-show="$flux.appearance === 'dark'" variant="mini" class="text-zinc-500 dark:text-white" />
-                    <flux:icon.moon x-show="$flux.appearance === 'system' && $flux.dark" variant="mini" />
-                    <flux:icon.sun x-show="$flux.appearance === 'system' && ! $flux.dark" variant="mini" />
+                    <flux:icon.sun x-show="$flux.appearance === 'light'" variant="mini" class="text-zinc-500 dark:text-white" x-cloak/>
+                    <flux:icon.moon x-show="$flux.appearance === 'dark'" variant="mini" class="text-zinc-500 dark:text-white" x-cloak/>
+                    <flux:icon.moon x-show="$flux.appearance === 'system' && $flux.dark" variant="mini" x-cloak/>
+                    <flux:icon.sun x-show="$flux.appearance === 'system' && ! $flux.dark" variant="mini" x-cloak/>
                 </flux:button>
 
                 <flux:menu>
@@ -64,14 +64,33 @@
             
         </nav>
 
-        <!-- Mobile Menu Button -->
-        <button id="menu-toggle" 
-            class="md:hidden flex items-center text-gray-700 dark:text-gray-300 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
+        <div class="flex items-center gap-4 md:hidden">
+            <!-- Light/Dark Toggle for Mobile -->
+            <flux:dropdown x-data align="end">
+                <flux:button variant="subtle" square class="group" aria-label="Preferred color scheme">
+                    <flux:icon.sun x-show="$flux.appearance === 'light'" variant="mini" class="text-zinc-500 dark:text-white" x-cloak/>
+                    <flux:icon.moon x-show="$flux.appearance === 'dark'" variant="mini" class="text-zinc-500 dark:text-white" x-cloak/>
+                    <flux:icon.moon x-show="$flux.appearance === 'system' && $flux.dark" variant="mini" x-cloak/>
+                    <flux:icon.sun x-show="$flux.appearance === 'system' && ! $flux.dark" variant="mini" x-cloak/>
+                </flux:button>
+
+                <flux:menu>
+                    <flux:menu.item icon="sun" x-on:click="$flux.appearance = 'light'">Light</flux:menu.item>
+                    <flux:menu.item icon="moon" x-on:click="$flux.appearance = 'dark'">Dark</flux:menu.item>
+                    <flux:menu.item icon="computer-desktop" x-on:click="$flux.appearance = 'system'">System</flux:menu.item>
+                </flux:menu>
+            </flux:dropdown>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" 
+                class="flex items-center text-gray-700 dark:text-gray-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
     </div>
 
     <!-- Mobile Dropdown Menu -->
