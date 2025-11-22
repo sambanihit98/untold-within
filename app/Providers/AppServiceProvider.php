@@ -20,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Forces all generated URLs to use HTTPS in production to prevent redirect issues and mixed content
         if ($this->app->environment('production')) {
             URL::forceScheme('https');
         }
