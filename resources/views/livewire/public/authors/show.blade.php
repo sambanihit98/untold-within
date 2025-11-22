@@ -7,7 +7,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Volt\Component;
 use Livewire\Attributes\Computed;
 
-new #[Layout('components.layouts.public.app')] class extends Component {
+new #[Layout('components.layouts.public.app', ['title' => 'Authors | Untold Within'])] class extends Component {
     
     public $author;
     public bool $isFollowing = false;

@@ -5,8 +5,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\Rule;
 use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
 
-new #[Layout('components.layouts.private.app')] class extends Component {
+new #[Layout('components.layouts.app', ['title' => 'Profile | Settings'])] class extends Component {
 
     public $user;
     public $showEditModal = false;

@@ -4,7 +4,7 @@ use App\Models\Tag;
 use Livewire\Attributes\Layout;
 use Livewire\Volt\Component;
 
-new #[Layout('components.layouts.public.app')] class extends Component {
+new #[Layout('components.layouts.public.app', ['title' => 'Tag | Untold Within'])] class extends Component {
     
     public $tag;
 

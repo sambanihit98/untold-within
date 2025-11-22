@@ -1,12 +1,12 @@
 <?php
 
 use Livewire\Volt\Component;
-
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Computed;
 use App\Models\Like;
 use Livewire\WithPagination;
 
-new class extends Component {
+new #[Layout('components.layouts.app', ['title' => 'Liked Posts'])] class extends Component {
     
 
     #[Computed]

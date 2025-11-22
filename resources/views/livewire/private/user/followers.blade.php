@@ -4,8 +4,9 @@ use Livewire\Volt\Component;
 use Livewire\Attributes\Computed;
 use App\Models\User;
 use Livewire\WithPagination;
+use Livewire\Attributes\Layout;
 
-new class extends Component {
+new #[Layout('components.layouts.app', ['title' => 'Followers'])] class extends Component {
 
     use WithPagination;
     

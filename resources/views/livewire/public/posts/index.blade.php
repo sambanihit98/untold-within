@@ -6,7 +6,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Computed;
 use Livewire\Volt\Component;
 
-new #[Layout('components.layouts.public.app')] class extends Component {
+new #[Layout('components.layouts.public.app', ['title' => 'Posts | Untold Within'])] class extends Component {
     
     use WithPagination;
 

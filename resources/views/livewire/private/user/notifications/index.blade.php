@@ -5,8 +5,9 @@ use Livewire\Volt\Component;
 use Livewire\Attributes\Computed;
 use App\Models\Notification;
 use App\Models\Post;
+use Livewire\Attributes\Layout;
 
-new class extends Component {
+new #[Layout('components.layouts.app', ['title' => 'Notifications'])] class extends Component {
     
     #[Computed]
     public function notifications(){

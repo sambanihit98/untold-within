@@ -5,7 +5,7 @@ use Livewire\Attributes\Computed;
 use Livewire\Attributes\Layout;
 use Livewire\Volt\Component;
 
-new #[Layout('components.layouts.public.app')] class extends Component {
+new #[Layout('components.layouts.public.app', ['title' => 'Home | Untold Within'])] class extends Component {
     
     #[Computed]
     public function posts(){

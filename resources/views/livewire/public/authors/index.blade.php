@@ -6,7 +6,7 @@ use App\Models\User;
 use Livewire\Attributes\Computed;
 use Livewire\WithPagination;
 
-new #[Layout('components.layouts.public.app')] class extends Component {
+new #[Layout('components.layouts.public.app', ['title' => 'Authors | Untold Within'])] class extends Component {
     
     use WithPagination;
 

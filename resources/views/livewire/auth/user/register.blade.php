@@ -9,7 +9,7 @@ use Illuminate\Validation\Rule;
 use Livewire\Attributes\Layout;
 use Livewire\Volt\Component;
 
-new #[Layout('components.layouts.auth')] class extends Component {
+new #[Layout('components.layouts.auth', ['title' => 'Register | Untold Within'])] class extends Component {
     public $username;
     public $firstname;
     public $middlename;

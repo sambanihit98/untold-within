@@ -10,7 +10,7 @@ use App\Models\Notification;
 use Livewire\Attributes\Computed;
 use Illuminate\Support\Facades\DB;
 
-new #[Layout('components.layouts.public.app')] class extends Component {
+new #[Layout('components.layouts.public.app', ['title' => 'Posts | Untold Within'])] class extends Component {
     
     public $post;
     public $otherPosts;

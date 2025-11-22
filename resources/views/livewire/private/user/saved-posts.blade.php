@@ -1,12 +1,12 @@
 <?php
 
 use Livewire\Volt\Component;
-
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Computed;
 use App\Models\Save;
 use Livewire\WithPagination;
 
-new class extends Component {
+new #[Layout('components.layouts.app', ['title' => 'Saved Posts'])] class extends Component {
      #[Computed]
     public function savedPosts()
     {

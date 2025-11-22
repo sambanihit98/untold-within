@@ -6,7 +6,9 @@ use App\Models\Notification;
 use App\Models\Post;
 use App\Models\Comment;
 
-new class extends Component {
+use Livewire\Attributes\Layout;
+
+new #[Layout('components.layouts.app', ['title' => 'Notifications'])] class extends Component {
     
     public $notification;
 

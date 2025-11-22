@@ -3,7 +3,7 @@
 use Livewire\Attributes\Layout;
 use Livewire\Volt\Component;
 
-new #[Layout('components.layouts.public.app')] class extends Component {
+new #[Layout('components.layouts.public.app', ['title' => 'About | Untold Within'])] class extends Component {
     //
 }; ?>
 

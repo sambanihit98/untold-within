@@ -4,7 +4,7 @@ use App\Models\Topic;
 use Livewire\Attributes\Layout;
 use Livewire\Volt\Component;
 
-new #[Layout('components.layouts.public.app')] class extends Component {
+new #[Layout('components.layouts.public.app', ['title' => 'Topics | Untold Within'])] class extends Component {
     
     public $topic;
 
