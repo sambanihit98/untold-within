@@ -128,7 +128,7 @@ new #[Layout('components.layouts.app', ['title' => 'My Posts'])] class extends C
         $this->resultsTopics = Topic::query()
             ->where('name', 'like', '%' . $this->searchTopics . '%')
             ->whereNotIn('id', $this->selectedTopics)
-            ->take(10)
+            // ->take(10)
             ->get();
     }
 
@@ -177,7 +177,7 @@ new #[Layout('components.layouts.app', ['title' => 'My Posts'])] class extends C
             ->whereIn('topic_id', $this->selectedTopics)
             ->whereNotIn('id', $this->selectedTags)
             ->where('name', 'like', '%' . $this->searchTags . '%')
-            ->take(10)
+            // ->take(10)
             ->get();
 
     }
