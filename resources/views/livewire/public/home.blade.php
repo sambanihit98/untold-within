@@ -113,7 +113,7 @@ new #[Layout('components.layouts.public.app', ['title' => 'Home | Untold Within'
                             <span class="text-sm font-semibold text-brown-600 dark:text-cyan-600">Tags:</span>
                             @foreach ($post->tags as $tag)
                                 <x-public.post-tag href="/topics/{{ $tag->topic_id }}/{{ $tag->id }}">
-                                    {{ $topic->name }}
+                                    {{ $tag->name }}
                                 </x-public.post-tag>
                             @endforeach
                         </div>
