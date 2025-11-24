@@ -581,7 +581,7 @@ new #[Layout('components.layouts.public.app', ['title' => 'Posts | Untold Within
                                         </button>
 
                                         <!-- Reply Form -->
-                                        <div x-show="open" x-transition class="mt-4 pl-8">
+                                        <div x-show="open" x-transition class="mt-4 pl-8" x-cloak>
                                             <textarea 
                                                 wire:model.defer="replyText.{{ $comment->id }}"
                                                 rows="2"
