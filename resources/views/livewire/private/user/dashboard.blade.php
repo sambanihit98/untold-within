@@ -170,7 +170,7 @@ new #[Layout('components.layouts.app', ['title' => 'Dashboard'])]  class extends
 <div class="flex flex-col p-6">
 
 
-    @if (auth()->user() instanceof \Illuminate\Contracts\Auth\MustVerifyEmail &&! auth()->user()->hasVerifiedEmail())
+    {{-- @if (auth()->user() instanceof \Illuminate\Contracts\Auth\MustVerifyEmail &&! auth()->user()->hasVerifiedEmail())
         <!-- Email Verification Alert (Static) -->
         <div class="mb-6 p-6 border-l-4 border-yellow-500 bg-yellow-50 dark:bg-zinc-900 rounded-lg shadow-sm">
             <div class="flex items-start justify-between gap-4">
@@ -197,7 +197,8 @@ new #[Layout('components.layouts.app', ['title' => 'Dashboard'])]  class extends
 
             </div>
         </div>
-    @endif
+    @endif --}}
+    
 
     <!-- Breadcrumbs -->
     <flux:breadcrumbs>
