@@ -128,7 +128,7 @@ new class extends Component {
 
     #[Computed]
     public function topics(){
-        return Topic::latest()->withCount(['posts', 'tags'])->paginate(10);
+        return Topic::latest()->withCount(['posts', 'tags'])->paginate(20);
     }
 
 }; ?>
