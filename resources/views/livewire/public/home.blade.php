@@ -74,7 +74,7 @@ new #[Layout('components.layouts.public.app', ['title' => 'Home | Untold Within'
         {{-- Heading Title --}}
     <div class="relative mb-6 w-full text-center">
         <flux:heading size="xl" level="1">{{ __('Latest Posts') }}</flux:heading>
-        <flux:subheading size="lg" class="mb-6">{{ __('A collection of my thoughts, stories, and shared moments.') }}</flux:subheading>
+        <flux:subheading size="lg" class="mb-6">{{ __('A collection of thoughts, stories, and shared moments.') }}</flux:subheading>
         <flux:separator variant="subtle" />
     </div>
 
